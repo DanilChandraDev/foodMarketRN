@@ -7,8 +7,6 @@ import PastOrder from "../PastOrder";
 
 const Tab = createMaterialTopTabNavigator();
 
-const SecondRoute = () => <ContentTab />;
-
 const OrderTabSection = () => {
     return (
         <Tab.Navigator

@@ -13,7 +13,7 @@ const Header = ({ title, subTitle, onBack }) => {
                     </View>
                 </TouchableOpacity>
             )}
-            <View>
+            <View style={{ paddingRight: 13 }}>
                 <Text style={styles.title}>{title}</Text>
                 <Text style={styles.subtitle}>{subTitle}</Text>
             </View>

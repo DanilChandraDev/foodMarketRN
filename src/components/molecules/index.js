@@ -13,6 +13,7 @@ import OrderTabSection from "./OrderTabSection";
 import InProgress from "./InProgress";
 import PastOrder from "./PastOrder";
 import ProfileTabSection from "./ProfileTabSection";
+import BackgroundSignInUp from "./BackgroundSignInUp";
 
 export {
     Header,
@@ -30,4 +31,5 @@ export {
     InProgress,
     PastOrder,
     ProfileTabSection,
+    BackgroundSignInUp,
 };

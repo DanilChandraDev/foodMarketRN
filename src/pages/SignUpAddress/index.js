@@ -1,13 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Header, TextInput, Gap, Button, Select } from "../../components";
+import { StatusBar } from "react-native";
+import { ScrollView } from "react-native";
+import { Image } from "react-native";
+import { Verified } from "../../assets";
 
 const SignUpAddress = ({ navigation }) => {
     return (
-        <View style={styles.page}>
+        <ScrollView style={styles.page}>
+            <StatusBar translucent={false} style="light" />
             <Header
                 title="Address"
-                subTitle="Make sure it's validate"
+                subTitle="We want to make sure the pizza goes to the right hands."
                 onBack={() => {}}
             />
 
@@ -25,6 +30,13 @@ const SignUpAddress = ({ navigation }) => {
                 />
                 <Gap height={16} />
                 <Select label="City" />
+
+                <View style={styles.statement}>
+                    <Image source={Verified} style={styles.icon} />
+                    <Text style={styles.textStatement}>
+                        We will protect your data to prevent security risks.
+                    </Text>
+                </View>
                 <Gap height={24} />
                 <Button
                     text="Sign Up Now"
@@ -33,8 +45,20 @@ const SignUpAddress = ({ navigation }) => {
                     }}
                 />
                 <Gap height={12} />
+                <Text style={styles.tnc}>
+                    By registering I agree to the {""}
+                    <Text
+                        style={{
+                            color: "#1A98D6",
+                            textDecorationLine: "underline",
+                        }}
+                    >
+                        terms and conditions
+                    </Text>{" "}
+                    of Winged Eats.
+                </Text>
             </View>
-        </View>
+        </ScrollView>
     );
 };
 
@@ -42,7 +66,7 @@ export default SignUpAddress;
 
 const styles = StyleSheet.create({
     page: {
-        height: "100%",
+        flex: 1,
     },
     container: {
         backgroundColor: "white",
@@ -50,5 +74,24 @@ const styles = StyleSheet.create({
         paddingVertical: 26,
         marginTop: 24,
         flex: 1,
+    },
+    statement: {
+        flexDirection: "row",
+        marginTop: 22,
+        paddingHorizontal: 10,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    textStatement: {
+        fontFamily: "Poppins-Regular",
+        fontSize: 12,
+    },
+    icon: {
+        width: 20,
+        height: 20,
+        marginRight: 10,
+    },
+    tnc: {
+        textAlign: "center",
     },
 });

@@ -16,7 +16,11 @@ export default function App() {
 
     return (
         <SafeAreaProvider>
-            <StatusBar translucent={false} backgroundColor="#FFC700" />
+            <StatusBar
+                translucent={false}
+                backgroundColor="#1A98D6"
+                style="light"
+            />
             <NavigationContainer>
                 <Router />
             </NavigationContainer>

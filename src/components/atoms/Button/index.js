@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native";
 
-const Button = ({ text, color = "#FFC700", textColor = "black", onPress }) => {
+const Button = ({ text, color = "#1A98D6", textColor = "white", onPress }) => {
     return (
         <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
             <View style={styles.container(color)}>

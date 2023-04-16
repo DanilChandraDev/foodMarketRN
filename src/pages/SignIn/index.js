@@ -1,11 +1,18 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Button, Gap, Header, TextInput } from "../../components";
+import {
+    BackgroundSignInUp,
+    Button,
+    Gap,
+    Header,
+    TextInput,
+} from "../../components";
+import { ScrollView } from "react-native";
 
 const SignIn = ({ navigation }) => {
     return (
-        <View style={styles.page}>
-            <Header title="Sign In" subTitle="Find your best ever meal" />
+        <ScrollView style={styles.page}>
+            <BackgroundSignInUp label="LOGIN" />
             <View style={styles.container}>
                 <TextInput
                     label="Email Address"
@@ -27,7 +34,7 @@ const SignIn = ({ navigation }) => {
                     onPress={() => navigation.navigate("SignUp")}
                 />
             </View>
-        </View>
+        </ScrollView>
     );
 };
 
@@ -41,7 +48,8 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         paddingHorizontal: 24,
         paddingVertical: 26,
-        marginTop: 24,
+        marginTop: -60,
         flex: 1,
+        borderRadius: 40,
     },
 });

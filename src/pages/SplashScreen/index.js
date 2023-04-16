@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Text, View } from "react-native";
-import { Logo } from "../../assets";
+import { WingedLogo } from "../../assets";
 
 const SplashScreen = ({ navigation }) => {
     useEffect(() => {
@@ -11,22 +11,22 @@ const SplashScreen = ({ navigation }) => {
     return (
         <View
             style={{
-                backgroundColor: "#FFC700",
+                backgroundColor: "#1A98D6",
                 flex: 1,
                 justifyContent: "center",
                 alignItems: "center",
             }}
         >
-            <Logo />
+            <WingedLogo />
             <View style={{ height: 38 }} />
             <Text
                 style={{
                     fontSize: 32,
-                    color: "#020202",
+                    color: "#FFFFFF",
                     fontFamily: "Poppins-Medium",
                 }}
             >
-                FoodMarket
+                Winged Eats
             </Text>
         </View>
     );
