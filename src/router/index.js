@@ -11,8 +11,11 @@ import {
     Profile,
     Order,
     FoodDetail,
+    OrderSummary,
+    OrderDetail,
 } from "../pages";
 import { BottomNavigator } from "../components";
+import OrderSuccess from "../pages/OrderSuccess";
 
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
@@ -78,6 +81,21 @@ const Router = () => {
             <Stack.Screen
                 name="FoodDetail"
                 component={FoodDetail}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="OrderSummary"
+                component={OrderSummary}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="OrderSuccess"
+                component={OrderSuccess}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="OrderDetail"
+                component={OrderDetail}
                 options={{ headerShown: false }}
             />
         </Stack.Navigator>

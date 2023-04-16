@@ -1,14 +1,43 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
+import { StatusBar } from "react-native";
+import {
+    EmptyOrder,
+    Header,
+    HomeTabSection,
+    OrderTabSection,
+} from "../../components";
 
 const Order = () => {
+    const [isEmpty] = useState(false);
     return (
-        <View>
-            <Text>Order</Text>
+        <View style={styles.page}>
+            <StatusBar translucent={false} backgroundColor="#FFC700" />
+            {isEmpty ? (
+                <EmptyOrder />
+            ) : (
+                <View style={{ flex: 1 }}>
+                    <Header
+                        title="Your Orders"
+                        subTitle="Wait for the best meal"
+                    />
+                    <View style={styles.tabContainer}>
+                        <OrderTabSection />
+                    </View>
+                </View>
+            )}
         </View>
     );
 };
 
 export default Order;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    page: {
+        flex: 1,
+    },
+    tabContainer: {
+        flex: 1,
+        marginTop: 24,
+    },
+});

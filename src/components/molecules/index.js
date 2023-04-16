@@ -5,6 +5,14 @@ import HomeTabSection from "./HomeTabSection";
 import HomeProfile from "./HomeProfile";
 import Rating from "./Rating";
 import ItemListFood from "./ItemListFood";
+import ContentTab from "./ContentTab";
+import Counter from "./Counter";
+import ItemValue from "./ItemValue";
+import EmptyOrder from "./EmptyOrder";
+import OrderTabSection from "./OrderTabSection";
+import InProgress from "./InProgress";
+import PastOrder from "./PastOrder";
+import ProfileTabSection from "./ProfileTabSection";
 
 export {
     Header,
@@ -14,4 +22,12 @@ export {
     HomeProfile,
     Rating,
     ItemListFood,
+    ContentTab,
+    Counter,
+    ItemValue,
+    EmptyOrder,
+    OrderTabSection,
+    InProgress,
+    PastOrder,
+    ProfileTabSection,
 };

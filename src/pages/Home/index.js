@@ -1,6 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { Animated, ScrollView, StyleSheet, View } from "react-native";
 import { FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4 } from "../../assets";
 import { Gap } from "../../components";
 import {
@@ -14,40 +13,32 @@ const Home = ({ navigation }) => {
         <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.page}>
                 <HomeProfile />
-                <View>
-                    <ScrollView horizontal>
-                        <View style={styles.foodCardContainer}>
-                            <Gap width={24} />
-                            <FoodCard
-                                image={FoodDummy1}
-                                onPress={() =>
-                                    navigation.navigate("FoodDetail")
-                                }
-                            />
-                            <FoodCard
-                                image={FoodDummy2}
-                                onPress={() =>
-                                    navigation.navigate("FoodDetail")
-                                }
-                            />
-                            <FoodCard
-                                image={FoodDummy3}
-                                onPress={() =>
-                                    navigation.navigate("FoodDetail")
-                                }
-                            />
-                            <FoodCard
-                                image={FoodDummy4}
-                                onPress={() =>
-                                    navigation.navigate("FoodDetail")
-                                }
-                            />
-                        </View>
-                    </ScrollView>
-                </View>
-                <View style={styles.tabContainer}>
-                    <HomeTabSection />
-                </View>
+            </View>
+            <View>
+                <ScrollView horizontal>
+                    <View style={styles.foodCardContainer}>
+                        <Gap width={24} />
+                        <FoodCard
+                            image={FoodDummy1}
+                            onPress={() => navigation.navigate("FoodDetail")}
+                        />
+                        <FoodCard
+                            image={FoodDummy2}
+                            onPress={() => navigation.navigate("FoodDetail")}
+                        />
+                        <FoodCard
+                            image={FoodDummy3}
+                            onPress={() => navigation.navigate("FoodDetail")}
+                        />
+                        <FoodCard
+                            image={FoodDummy4}
+                            onPress={() => navigation.navigate("FoodDetail")}
+                        />
+                    </View>
+                </ScrollView>
+            </View>
+            <View style={styles.tabContainer}>
+                <HomeTabSection />
             </View>
         </ScrollView>
     );
@@ -66,6 +57,6 @@ const styles = StyleSheet.create({
         marginVertical: 24,
     },
     tabContainer: {
-        height: 400,
+        height: 700,
     },
 });

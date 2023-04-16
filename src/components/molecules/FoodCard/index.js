@@ -1,20 +1,20 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Rating from "../Rating";
-import { Touchable } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 
 const FoodCard = ({ image, onPress }) => {
     return (
-        <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
-            <View style={styles.container}>
-                <Image source={image} style={styles.image} />
-                <View style={styles.content}>
-                    <Text style={styles.text}>Cherry Healthy</Text>
-                    <Rating />
+        <View>
+            <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
+                <View style={styles.container}>
+                    <Image source={image} style={styles.image} />
+                    <View style={styles.content}>
+                        <Text style={styles.text}>Cherry Healthy</Text>
+                        <Rating />
+                    </View>
                 </View>
-            </View>
-        </TouchableOpacity>
+            </TouchableOpacity>
+        </View>
     );
 };
 
@@ -30,10 +30,8 @@ const styles = StyleSheet.create({
         shadowOffset: { width: -2, height: 4 },
         shadowOpacity: 0.2,
         shadowRadius: 3,
-        elevation: 20,
+        elevation: 10,
         overflow: "hidden",
-        borderColor: "black",
-        borderBottomWidth: 0.5,
     },
     image: {
         width: 200,

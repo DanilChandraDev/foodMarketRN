@@ -1,14 +1,13 @@
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { StyleSheet, View, TouchableOpacity, Animated } from "react-native";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import ContentTab from "../ContentTab";
+import InProgress from "../InProgress";
+import PastOrder from "../PastOrder";
 
 const Tab = createMaterialTopTabNavigator();
 
-const SecondRoute = () => <ContentTab />;
-const SeconddRoute = () => <ContentTab />;
-
-const HomeTabSection = () => {
+const ProfileTabSection = () => {
     return (
         <Tab.Navigator
             screenOptions={{
@@ -34,13 +33,12 @@ const HomeTabSection = () => {
                 },
             }}
         >
-            <Tab.Screen name="New Taste" component={ContentTab} />
-            <Tab.Screen name="Popular" component={SecondRoute} />
-            <Tab.Screen name="Recomended" component={SeconddRoute} />
+            <Tab.Screen name="In Progress" component={InProgress} />
+            <Tab.Screen name="Past Orders" component={PastOrder} />
         </Tab.Navigator>
     );
 };
 
-export default HomeTabSection;
+export default ProfileTabSection;
 
 const styles = StyleSheet.create({});
