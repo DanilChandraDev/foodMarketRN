@@ -7,7 +7,6 @@ import { ScrollView } from "react-native";
 const OrderDetail = () => {
     return (
         <ScrollView>
-            <StatusBar translucent={false} backgroundColor="#FFC700" />
             <Header
                 title="Payment"
                 subTitle="You deserve better meal"

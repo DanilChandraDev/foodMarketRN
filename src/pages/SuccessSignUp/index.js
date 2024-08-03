@@ -1,18 +1,19 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { IlSuccessSignUp } from "../../assets/Ilustration";
+import { StyleSheet, Text, View } from "react-native";
+import { IceCream } from "../../assets/Ilustration";
 import { Button, Gap } from "../../components";
 
 const SuccessSignUp = ({ navigation }) => {
     return (
         <View style={styles.page}>
-            <IlSuccessSignUp />
+            <IceCream />
             <Gap height={30} />
-            <Text style={styles.title}>Yeay! Completed</Text>
+            <Text style={styles.title}>You All Set Up !</Text>
             <Gap height={6} />
-            <Text style={styles.subTitle}>Now you are able to order</Text>
-            <Text style={styles.subTitle}>some food as a self-reward</Text>
+            <Text style={styles.subTitle}>All food now on your phone</Text>
+            <Text style={styles.subTitle}>
+                Express Eats, Lightning-Fast Delivery!
+            </Text>
             <Gap height={30} />
             <View style={styles.buttonContainer}>
                 <Button
