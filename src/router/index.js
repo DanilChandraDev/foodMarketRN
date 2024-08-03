@@ -24,6 +24,7 @@ const MainApp = () => {
     return (
         <Tab.Navigator
             tabBarPosition="bottom"
+            screenOptions={{ swipeEnabled: false }}
             tabBar={(props) => <BottomNavigator {...props} />}
         >
             <Tab.Screen

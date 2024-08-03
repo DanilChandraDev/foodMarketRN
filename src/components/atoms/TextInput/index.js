@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TextInput as TextInputRN } from "react-native";
 import React from "react";
 
-const TextInput = ({ label, placeholder, secure = false }) => {
+const TextInput = ({ label, placeholder, secure = false, ...restProps }) => {
     return (
         <View>
             <Text style={styles.label}>{label}</Text>
@@ -9,6 +9,7 @@ const TextInput = ({ label, placeholder, secure = false }) => {
                 secureTextEntry={secure}
                 style={styles.input}
                 placeholder={placeholder}
+                {...restProps}
             />
         </View>
     );

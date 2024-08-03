@@ -23,6 +23,7 @@ const ContentTab = () => {
             <ItemListFood
                 image={FoodDummy1}
                 rating={3}
+                name="Soup Bumil"
                 onPress={() => navigation.navigate("FoodDetail")}
             />
             <ItemListFood

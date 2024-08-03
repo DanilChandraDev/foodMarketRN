@@ -14,6 +14,10 @@ import InProgress from "./InProgress";
 import PastOrder from "./PastOrder";
 import ProfileTabSection from "./ProfileTabSection";
 import BackgroundSignInUp from "./BackgroundSignInUp";
+import SearchBar from "./SearchBar";
+import CarouselPromo from "./CarouselPromo";
+import IconFoodSection from "./IconFoodSection";
+import Loading from "./Loading";
 
 export {
     Header,
@@ -32,4 +36,8 @@ export {
     PastOrder,
     ProfileTabSection,
     BackgroundSignInUp,
+    SearchBar,
+    CarouselPromo,
+    IconFoodSection,
+    Loading,
 };

@@ -1,14 +1,30 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import { ProfileDummy } from "../../../assets";
+import { IcDown, ProfileDummy } from "../../../assets";
+
 import React from "react";
+import { TouchableOpacity } from "react-native";
 
 const HomeProfile = () => {
     return (
         <View style={styles.profileContainer}>
-            <View>
-                <Text style={styles.appName}>Food Market</Text>
-                <Text style={styles.description}>Let's get some foods</Text>
-            </View>
+            <TouchableOpacity activeOpacity={0.6}>
+                <View>
+                    <View
+                        style={{
+                            flexDirection: "row",
+                            alignItems: "center",
+                        }}
+                    >
+                        <Text style={styles.label}>Your Location</Text>
+                        <Image
+                            source={IcDown}
+                            style={{ width: 12, height: 12, marginLeft: 8 }}
+                        />
+                    </View>
+                    <Text style={styles.location}>Home</Text>
+                </View>
+            </TouchableOpacity>
+
             <Image source={ProfileDummy} style={styles.profile} />
         </View>
     );
@@ -23,17 +39,16 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         paddingTop: 32,
         paddingBottom: 24,
-        backgroundColor: "white",
     },
-    appName: {
-        fontSize: 22,
+    location: {
+        fontSize: 18,
         fontFamily: "Poppins-Medium",
         color: "#020202",
     },
-    description: {
+    label: {
         fontSize: 14,
         fontFamily: "Poppins-Light",
-        color: "#8D92A3",
+        color: "#FFFFFF",
     },
     profile: {
         width: 50,

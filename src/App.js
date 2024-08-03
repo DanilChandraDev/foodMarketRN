@@ -1,11 +1,31 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { SplashScreen, SignIn } from "./pages";
-import { useFonts } from "expo-font";
 import { NavigationContainer } from "@react-navigation/native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { useFonts } from "expo-font";
+import { StatusBar } from "expo-status-bar";
+import { LogBox, StyleSheet } from "react-native";
+import "react-native-gesture-handler";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Provider, useSelector } from "react-redux";
+import store from "./redux/store";
 import Router from "./router";
-import { Gap } from "./components";
+import FlashMessage from "react-native-flash-message";
+import { Loading } from "./components";
+
+LogBox.ignoreLogs([
+    "ViewPropTypes will be removed",
+    "ColorPropType will be removed",
+    "[Reanimated] Mismatch between JavaScript part and native part of Reanimated (2.17.0 vs. 2.14.4)",
+]);
+
+const MainApp = () => {
+    const { isLoading } = useSelector((state) => state.globalReducer);
+    return (
+        <NavigationContainer>
+            <Router />
+            <FlashMessage position="top" />
+            {isLoading && <Loading />}
+        </NavigationContainer>
+    );
+};
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -21,9 +41,9 @@ export default function App() {
                 backgroundColor="#1A98D6"
                 style="light"
             />
-            <NavigationContainer>
-                <Router />
-            </NavigationContainer>
+            <Provider store={store}>
+                <MainApp />
+            </Provider>
         </SafeAreaProvider>
     );
 }

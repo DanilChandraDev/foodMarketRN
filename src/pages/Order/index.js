@@ -12,7 +12,6 @@ const Order = () => {
     const [isEmpty] = useState(false);
     return (
         <View style={styles.page}>
-            <StatusBar translucent={false} backgroundColor="#FFC700" />
             {isEmpty ? (
                 <EmptyOrder />
             ) : (
